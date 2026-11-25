@@ -1,7 +1,7 @@
 import { Container } from '@/components/ui/Container'
+import { SignatureShowcase } from '@/components/ui/SignatureShowcase'
 import { HERO_CONTENT } from '@/data/brand'
-import { FEATURED_MENU_ITEM } from '@/data/menu'
-import { formatPrice } from '@/utils/format'
+import { MENU_ITEMS, SHOWCASE_CATEGORIES } from '@/data/menu'
 
 export function HeroSection() {
   return (
@@ -35,43 +35,10 @@ export function HeroSection() {
         </div>
 
         <div className="lg:col-span-5">
-          <div className="rounded-2xl border border-stone-200 bg-white p-8 sm:p-10">
-            <div className="flex items-center justify-between border-b border-stone-100 pb-4 text-[11px] font-semibold tracking-[0.18em] uppercase">
-              <span className="text-amber-800">House Signature</span>
-              <span className="text-stone-400">
-                {FEATURED_MENU_ITEM.category}
-              </span>
-            </div>
-
-            <div className="mt-8">
-              <div className="flex items-baseline justify-between gap-4">
-                <h2 className="font-serif text-2xl text-stone-900 sm:text-3xl">
-                  {FEATURED_MENU_ITEM.name}
-                </h2>
-                <span className="shrink-0 text-lg font-medium text-stone-900 tabular-nums">
-                  {formatPrice(FEATURED_MENU_ITEM.price)}
-                </span>
-              </div>
-
-              <p className="mt-4 text-sm leading-relaxed text-stone-500">
-                {FEATURED_MENU_ITEM.description}
-              </p>
-
-              <p className="mt-6 text-xs tracking-wide text-stone-400">
-                {FEATURED_MENU_ITEM.servingNote}
-              </p>
-            </div>
-
-            <div className="mt-8 border-t border-stone-100 pt-5">
-              <a
-                href="#menu"
-                className="inline-flex items-center gap-2 text-sm font-medium text-stone-900 transition-colors hover:text-amber-800"
-              >
-                <span>View Full Menu</span>
-                <span aria-hidden="true">&rarr;</span>
-              </a>
-            </div>
-          </div>
+          <SignatureShowcase
+            items={MENU_ITEMS}
+            categories={SHOWCASE_CATEGORIES}
+          />
         </div>
       </Container>
     </section>

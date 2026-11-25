@@ -9,3 +9,18 @@
     @apply bg-[#faf8f5] text-stone-900 antialiased selection:bg-stone-900 selection:text-stone-50;
   }
 }
+
+@keyframes signature-fade {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-signature-fade {
+  animation: signature-fade 320ms ease-out;
+}

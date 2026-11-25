@@ -1,4 +1,4 @@
-import type { MenuCategory, MenuItem } from '@/types'
+import type { DishCategory, MenuCategory, MenuItem } from '@/types'
 
 export const MENU_CATEGORIES: MenuCategory[] = [
   'All',
@@ -106,4 +106,9 @@ export const MENU_ITEMS: MenuItem[] = [
   },
 ]
 
-export const FEATURED_MENU_ITEM: MenuItem = MENU_ITEMS[0]
+export const SHOWCASE_CATEGORIES: DishCategory[] = [
+  'Pinoy Signatures',
+  'Espresso',
+  'Non-Coffee',
+  'Pastries',
+]
