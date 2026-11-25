@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[#faf8f5] text-stone-900 antialiased selection:bg-stone-900 selection:text-stone-50;
+  }
+}
